@@ -168,11 +168,15 @@ static void prvSetupHardware( void );
 
 int main(void)
 {
+
 	init_trafficlight_gpio();
 	init_adc();
 	init_shift_register_gpio();
+	printf("system initialization complete\n");
 	system_test();
-
+	printf("system test complete\n");
+	while(1){
+	}
 	return 0;
 }
 
